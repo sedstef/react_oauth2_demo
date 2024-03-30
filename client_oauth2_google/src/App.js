@@ -30,6 +30,16 @@ function App() {
                         setProfile(res.data);
                     })
                     .catch((err) => console.log(err));
+
+                fetchToken(user);
+
+                async function fetchToken(user){
+                    console.log('fetch oauth2.googleapis.com/tokeninfo');
+                    const response = await fetch(`https://oauth2.googleapis.com/tokeninfo?access_token=${user.access_token}`)
+                    console.log(response.json());
+
+                }
+
             }
         },
         [user]
@@ -53,13 +63,12 @@ function App() {
                 Accept: 'application/json'
             }
         })
-            //.then(response =>                 {
-            //    console.log(response);
-            //      return response;
-            //  })
-            .then(response => response.json())
+            .then(response => {
+                console.log(response);
+                return response.json();
+            })
             .then(data => {
-                setGreeting(data.content);
+                setGreeting(data.greeting);
             })
             .catch((error) => console.log('ERROR in get greeting: ' + error));
     }

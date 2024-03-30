@@ -15,10 +15,10 @@ import static org.springframework.http.HttpStatus.OK;
 @CrossOrigin(origins = "http://localhost:3000")
 public class HelloBoundary {
 
-    @GetMapping(produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(OK)
     public ResponseEntity<String> sayHello() {
-        return ResponseEntity.ok("Hello World");
+        return ResponseEntity.ok("{\"greeting\":\"Hello World\"}");
     }
 
 }
