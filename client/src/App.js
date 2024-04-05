@@ -31,15 +31,6 @@ function App() {
                     })
                     .catch((err) => console.log(err));
 
-                fetchToken(user);
-
-                async function fetchToken(user){
-                    console.log('fetch oauth2.googleapis.com/tokeninfo');
-                    const response = await fetch(`https://oauth2.googleapis.com/tokeninfo?access_token=${user.access_token}`)
-                    console.log(response.json());
-
-                }
-
             }
         },
         [user]
