@@ -10,10 +10,10 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.example.resourceserver</groupId>
-    <artifactId>resource-server</artifactId>
+    <groupId>at.fh-joanneum.softarch</groupId>
+    <artifactId>greeting-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>resource-server</name>
+    <name>Greeting Service</name>
 
     <properties>
         <java.version>11</java.version>

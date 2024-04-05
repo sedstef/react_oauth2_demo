@@ -1,13 +1,13 @@
-package com.example.resourceserver;
+package at.fhjoanneum.softarch.greetingservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ResourceServerApplication {
+public class GreetingServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ResourceServerApplication.class, args);
+		SpringApplication.run(GreetingServiceApplication.class, args);
 	}
 
 }
