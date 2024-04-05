@@ -1,4 +1,4 @@
-package com.example.resourceserver.greeting;
+package at.fhjoanneum.softarch.greetingservice.greeting;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;

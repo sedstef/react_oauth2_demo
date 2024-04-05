@@ -1,4 +1,4 @@
-package com.example.resourceserver.configuration;
+package at.fhjoanneum.softarch.greetingservice.configuration;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.DeserializationFeature;

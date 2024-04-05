@@ -1,4 +1,4 @@
-package com.example.resourceserver.configuration;
+package at.fhjoanneum.softarch.greetingservice.configuration;
 
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.*;
