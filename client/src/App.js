@@ -7,7 +7,7 @@ import axios from 'axios';
 function App() {
 
     const [user, setUser] = useState([]);
-    const [profile, setProfile] = useState([]);
+    const [profile, setProfile] = useState(null);
 
     const [greeting, setGreeting] = useState();
 
@@ -40,6 +40,7 @@ function App() {
     const logOut = () => {
         googleLogout();
         setProfile(null);
+        setGreeting(null)
     };
 
     function fetchGreeting() {
