@@ -7,7 +7,7 @@ import axios from 'axios';
 function App() {
 
     const [user, setUser] = useState([]);
-    const [profile, setProfile] = useState([]);
+    const [profile, setProfile] = useState(null);
 
     const [greeting, setGreeting] = useState();
 
@@ -31,15 +31,6 @@ function App() {
                     })
                     .catch((err) => console.log(err));
 
-                fetchToken(user);
-
-                async function fetchToken(user){
-                    console.log('fetch oauth2.googleapis.com/tokeninfo');
-                    const response = await fetch(`https://oauth2.googleapis.com/tokeninfo?access_token=${user.access_token}`)
-                    console.log(response.json());
-
-                }
-
             }
         },
         [user]
@@ -49,6 +40,7 @@ function App() {
     const logOut = () => {
         googleLogout();
         setProfile(null);
+        setGreeting(null)
     };
 
     function fetchGreeting() {
@@ -56,7 +48,7 @@ function App() {
 
         //const API_BASEURL = process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL : '';
         const API_BASEURL = 'http://localhost:8080'
-        fetch(`${API_BASEURL}/api/v1/hello`, {
+        fetch(`${API_BASEURL}/api/v1/hello/${profile.name}`, {
             method: 'GET',
             headers: {
                 Authorization: `Bearer ${user.access_token}`,
