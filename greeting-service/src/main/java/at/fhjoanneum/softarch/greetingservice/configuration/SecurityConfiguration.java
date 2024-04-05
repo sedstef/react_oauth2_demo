@@ -1,4 +1,4 @@
-package com.example.resourceserver.configuration;
+package at.fhjoanneum.softarch.greetingservice.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;

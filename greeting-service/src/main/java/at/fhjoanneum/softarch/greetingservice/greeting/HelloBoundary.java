@@ -1,4 +1,4 @@
-package com.example.resourceserver.greeting;
+package at.fhjoanneum.softarch.greetingservice.greeting;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
@@ -15,10 +15,10 @@ import static org.springframework.http.HttpStatus.OK;
 @CrossOrigin(origins = "http://localhost:3000")
 public class HelloBoundary {
 
-    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/{name}", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(OK)
-    public ResponseEntity<String> sayHello() {
-        return ResponseEntity.ok("{\"greeting\":\"Hello World\"}");
+    public ResponseEntity<String> sayHello(@PathVariable("name") String name) {
+        return ResponseEntity.ok("{\"greeting\":\"Hello "+name+"\"}");
     }
 
 }
