@@ -48,7 +48,7 @@ function App() {
 
         //const API_BASEURL = process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL : '';
         const API_BASEURL = 'http://localhost:8080'
-        fetch(`${API_BASEURL}/api/v1/hello`, {
+        fetch(`${API_BASEURL}/api/v1/hello/${profile.name}`, {
             method: 'GET',
             headers: {
                 Authorization: `Bearer ${user.access_token}`,
