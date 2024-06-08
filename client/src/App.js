@@ -70,21 +70,22 @@ function App() {
         <div className="App">
             <header className="App-header">
                 {profile ? (
+                    <>
                     <div>
-                        <img src={profile.picture} alt="user image" />
+                        <img src={profile.picture} alt="user image"/>
                         <h3>User Logged in</h3>
                         <p>Name: {profile.name}</p>
                         <p>Email Address: {profile.email}</p>
-                        <br />
-                        <br />
+                        <br/>
+                        <br/>
                         <button onClick={logOut}>Log out</button>
+
                     </div>
+                    <button onClick={fetchGreeting}>Greeting</button>
+                    </>
                 ) : (
                     <button onClick={() => login()}>Sign in with Google 🚀 </button>
                 )}
-
-                <button onClick={fetchGreeting}>Greeting</button>
-
                 <h1>{greeting}</h1>
 
                 <img src={logo} className="App-logo" alt="logo"/>
