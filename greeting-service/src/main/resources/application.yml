@@ -7,8 +7,8 @@ spring:
       client:
         registration:
           google:
-            client-id: 909525243788-477pvdr0jef28ekijascml2bpdp5m5ou.apps.googleusercontent.com
-            client-secret: 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
+            client-id: <client id from google konsole>
+            client-secret: <client secret from google konsole>
             scope: openid,profile,email
       resourceserver:
         jwt:
